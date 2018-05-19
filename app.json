@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/task/task",
+    "pages/calendar/calendar",
+    "pages/add/add",
+    "pages/unfinished/unfinished",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/task/task",
+        "text": "所有任务",
+        "iconPath": "images/task.png",
+        "selectedIconPath": "images/task-selected.png"
+      },
+      {
+        "pagePath": "pages/unfinished/unfinished",
+        "text": "未完成任务",
+        "iconPath": "images/close.png",
+        "selectedIconPath": "images/close-selected.png"
+      },
+      {
+        "pagePath": "pages/calendar/calendar",
+        "text": "日历",
+        "iconPath": "images/calendar.png",
+        "selectedIconPath": "images/calendar-selected.png"
+      }
+    ]
+  }
+}

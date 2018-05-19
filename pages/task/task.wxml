@@ -1,0 +1,57 @@
+<view class="next-wrap">
+  <view hidden="{{day.post}}" class="none-tip">
+    hi, new day to go!
+  </view>
+
+  <view>
+    <text class="time">{{time}}</text>
+     <image bindtap="toAdd" src='../../images/plus.png' class="next-add">
+    </image>
+  </view>
+
+
+  <!-- 
+  day{
+    post:[
+      {
+        state:"紧急程度"
+        work : “写入的任务”,
+        date : "写入的时间",
+        complete ： 完成情况
+      }
+      {
+        state:"紧急程度"
+        work : “写入的任务”,
+        date : "写入的时间",
+        complete ： 完成情况
+      }
+    ]  
+    content : "鼓励的话"
+    nowdate :　星期
+  }
+  
+   -->
+
+  <view class="next-item">
+
+    <block wx:for="{{day.post}}" wx:for-item="post" wx:key="*this">
+      <view class="next-body">
+
+        <icon bindtap="checkHandle" id="{{index}}" class="next-icon" type="{{post.complete ? 'success': 'circle'}}" size="20" />
+
+        <text wx:if="{{post.state === 'normal'}}" class="next-state normal">普通</text>
+        <text wx:if="{{post.state === 'important'}}" class="next-state important">重要</text>
+        <text wx:if="{{post.state === 'crash'}}" class="next-state crash">紧急</text>
+        <view bindtap='detail' id="{{index}}" class="next-text">{{post.content}}</view>
+
+      </view>
+    </block>
+
+    <view class="next-tip" >{{day.comment}}</view>
+
+  </view>
+
+  <button type="warn" bindtap='delete'>双击才能删除最后日程之前的日程</button>
+
+ 
+</view>

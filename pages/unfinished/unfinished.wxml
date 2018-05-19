@@ -1,0 +1,21 @@
+<view class="next-wrap">
+
+  <view class="next-tip">加油！这些是接下来要完成的</view>
+
+  <view class="next-item">
+
+    <block wx:for="{{day.post}}" wx:for-item="post" wx:key="*this">
+      <view wx:if="{{post.complete==false}}" class="next-body">
+        <icon bindtap="checkHandle" id="{{index}}" class="next-icon" type="{{post.complete ? 'success': 'circle'}}" size="18" />
+        <text wx:if="{{post.state === 'normal'}}" class="next-state normal">普通</text>
+        <text wx:if="{{post.state === 'important'}}" class="next-state important">重要</text>
+        <text wx:if="{{post.state === 'crash'}}" class="next-state crash">紧急</text>
+        <view class="next-text">{{post.content}}</view>
+      </view>
+    </block>
+
+
+
+
+  </view>
+</view>

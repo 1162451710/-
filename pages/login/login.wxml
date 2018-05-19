@@ -1,0 +1,17 @@
+<view>
+    <form bindsubmit='formSubmit' >
+      <input class='input_password'  value='请输入密码' name="newpassword"  bindinput='inputpassword'>
+      </input>
+      <view>
+         <button bindtap='config'>
+          注册
+      </button>
+      </view>
+     
+     
+      <button formType="submit">
+          登录
+      </button>
+    </form>
+
+</view>
