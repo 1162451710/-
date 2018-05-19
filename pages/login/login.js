@@ -33,7 +33,7 @@ Page({
        
     //   }
     // })
-    if (wx.getStorageSync("password")=="asdfghjkl;oiuytrexdfgh"){
+    if (wx.getStorageSync("password")==false){
       wx.setStorageSync("password", this.data.newpassword);
     }else{
       wx.showToast({
@@ -48,7 +48,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.setStorageSync("password", "asdfghjkl;oiuytrexdfgh")
+    // wx.setStorageSync("password", "asdfghjkl;oiuytrexdfgh")
   },
 
   /**
